@@ -1,0 +1,111 @@
+<html>
+    <html lang="pt-br">    
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+   <body>
+    <h2>Cadastro de produtos - Floricultura Encanto</h2>
+    <form action="processamento.php" method="POST">
+        <!-- Campo de texto -->
+        <label for="nome">Nome da Flor:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <!-- Lista suspensa -->
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" name="tipo">
+            <option value="Buque">Buquê</option>
+            <option value="Planta em vaso">Planta em vaso</option>
+            <option value="Semente">Semente</option>
+        </select><br><br>
+        <!-- Botões de rádio -->
+        <p>Tipo de sessão:</p> 
+        <input type="radio" id="vermelho" name="cor" value="vermelho" checked>
+        <label for="vermelho">Vermelho</label><br>
+        <input type="radio" id="amarelo" name="cor" value="amarelo">
+        <label for="amarelo">Amarelo</label><br>
+        <input type="radio" id="branca" name="cor" value="branca">
+        <label for="branca">Branca</label><br>
+        <input type="radio" id="rosa" name="cor" value="rosa">
+        <label for="rosa">Rosa</label><br><br>
+
+        <!-- Caixas de seleção -->
+        <p>Serviços Adicionais:</p>
+        <input type="checkbox" id="Entrega" name="servicos[]" value="Entrega">
+        <label for="Entrega">Entrega</label><br>
+
+        <input type="checkbox" id="Embalagem Especial" name="servicos[]" value="Embalagem Especial">
+        <label for="Embalagem Especial">Embalagem Especial</label><br>
+        <input type="checkbox" id="Cartão com Mensagem" name="servicos[]" value="Cartão com Mensagem">
+        <label for="Cartão com Mensagem">Cartão com Mensagem</label><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <style>
+        /* Define uma fonte padrão para todo o documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estiliza o cabeçalho */
+h2 {
+    color: #a14c62;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Centraliza e define um estilo para o formulário */
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: #ffeef0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(161, 76, 98, 0.2);
+}
+
+/* Estilo para rótulos */
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Estilo para campos de texto e lista suspensa */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilo para os blocos de radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Estilo para o botão de envio */
+input[type="submit"] {
+    background-color: #a14c62;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Efeito hover no botão */
+input[type="submit"]:hover {
+    background-color: #8d3f54;
+}
+
+    </style>
+</body>
+</html>
